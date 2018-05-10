@@ -9,7 +9,6 @@ This course will examine 1-2 databases from each of the four main NoSQL data mod
 2. [NoSQL Distilled: A Brief Guide to the Emerging World of Polyglot Persistence](https://www.amazon.com/NoSQL-Distilled-Emerging-Polyglot-Persistence/dp/0321826620)
 
 
-
 ## Schedule   
 
 |Schedule | Lecture/lab  |   
