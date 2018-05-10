@@ -433,18 +433,21 @@ db.posts.aggregate([
 
 // results
 { "_id" : { "pin_cat" : "other" },
- "total" : 7, "records" : [ "Teams deck" ],
-  "count" : 1, 
-  "percentage" : 14.285714285714285 }
+"total" : 7, "records" : [ "Teams deck" ],
+"count" : 1, 
+"percentage" : 14.285714285714285 }
 
 { "_id" : { "pin_cat" : "human resources" }, 
 "total" : 7, 
-"records" : [ "Recruiting Strategies for Startups", "The 5 Key Dynamics That Make A Great Team", "The 5 Key Dynamics That Make A Great Team", "4 Traits to Look for When Hiring Remote Workers (UpWork)", "Federal Court Blocks New Overtime Rule (By Littler, 11/23/16)", "2-23-17" ],
+"records" : [ "Recruiting Strategies for Startups", "The 5 Key Dynamics That Make A Great Team",
+"The 5 Key Dynamics That Make A Great Team", "4 Traits to Look for When Hiring Remote Workers (UpWork)",
+"Federal Court Blocks New Overtime Rule (By Littler, 11/23/16)", "2-23-17" ],
  "count" : 6, "percentage" : 85.71428571428571 }
 ```
 
 ### Key takeaway 6:
-To `$group` all the docuemnts we must first have `$project`-ed the results necessary.  
+Given that the pin_array is a list of ObjectIds (excluding edge cases), we can use `$lookup` to discover the each pin's category and then determine the category distribution of pins within the specified Post document. 
+`Note` - it is good to think about the relationship between `unwinding` arrays to look at inputs and respective fields individually as well as `grouping` them to create aggregate field values.
 
 ---
 
